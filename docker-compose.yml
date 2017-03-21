@@ -3,11 +3,11 @@
 
 patroni_etcd:
     container_name: patroni_etcd
-    image: patroni
+    image: kokdemir/patroni
     command: --etcd
 
 dbnode1:
-    image: patroni
+    image: kokdemir/patroni
     hostname: dbnode1
     links:
         - patroni_etcd:patroni_etcd
@@ -20,7 +20,7 @@ dbnode1:
         PATRONI_SCOPE: testcluster
 
 dbnode2:
-    image: patroni
+    image: kokdemir/patroni
     hostname: dbnode2
     links:
         - patroni_etcd:patroni_etcd
@@ -33,7 +33,7 @@ dbnode2:
         PATRONI_SCOPE: testcluster
 
 dbnode3:
-    image: patroni
+    image: kokdemir/patroni
     hostname: dbnode3
     links:
         - patroni_etcd:patroni_etcd
@@ -46,7 +46,7 @@ dbnode3:
         PATRONI_SCOPE: testcluster
 
 haproxy:
-    image: patroni
+    image: kokdemir/patroni
     links:
         - patroni_etcd:patroni_etcd
     ports:
