@@ -34,10 +34,11 @@ To automate this you can run the following script:
         --members   INT      The number of members for the cluster
         --name      NAME     The name of the new cluster
 
+
 Example session:
-# ./dev_patroni_cluster.sh --image kokdemir/patroni --members=3 --name=demo
-Started container demo_etcd, ip=172.17.0.7
-Started container demo_postgres1, ip=172.17.0.8
-Started container demo_postgres2, ip=172.17.0.9
-Started container demo_postgres3, ip=172.17.0.10
-Started container demo_haproxy, ip=172.17.0.11
+    # ./dev_patroni_cluster.sh --image kokdemir/patroni --members=3 --name=demo
+        Started container demo_etcd, ip=172.17.0.7
+        Started container demo_postgres1, ip=172.17.0.8
+        Started container demo_postgres2, ip=172.17.0.9
+        Started container demo_postgres3, ip=172.17.0.10
+        Started container demo_haproxy, ip=172.17.0.11
