@@ -36,6 +36,7 @@ To automate this you can run the following script:
 
 
 Example session:
+
     # ./dev_patroni_cluster.sh --image kokdemir/patroni --members=3 --name=demo
         Started container demo_etcd, ip=172.17.0.7
         Started container demo_postgres1, ip=172.17.0.8
